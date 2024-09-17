@@ -136,18 +136,22 @@ const Game = () => {
         <div className="letras-container">{criarDivs(letras)}</div>
 
         <form className="form-letra" onSubmit={enviarLetra}>
-          <p>Digite uma letra</p>
-          <input
-            className="input-letra"
-            type="text"
-            maxLength="1"
-            value={letra}
-            onChange={(e) => setLetra(e.target.value.toUpperCase())}
-            ref={inputRef}
-          />
-          <button className="btn-confirmar" type="submit">
-            Confirmar
-          </button>
+          <p>{jogoIniciado ? "Digite uma letra" : ""}</p>
+          {jogoIniciado && (
+            <>
+              <input
+                className="input-letra"
+                type="text"
+                maxLength="1"
+                value={letra}
+                onChange={(e) => setLetra(e.target.value.toUpperCase())}
+                ref={inputRef}
+              />
+              <button className="btn-confirmar" type="submit">
+                Confirmar
+              </button>
+            </>
+          )}
         </form>
 
         <div className="status-message-validacao">
