@@ -130,7 +130,9 @@ const Game = () => {
         <button className="btn-sortear" onClick={handleClick}>
           Sortear a palavra
         </button>
-        <p className="dica">Dica sobre a palavra: {dicaSorteada}</p>
+        <p className="dica">
+          {jogoIniciado ? `Dica sobre a palavra: ${dicaSorteada}` : ""}
+        </p>
         <div className="letras-container">{criarDivs(letras)}</div>
 
         <form className="form-letra" onSubmit={enviarLetra}>
