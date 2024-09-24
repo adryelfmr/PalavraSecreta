@@ -145,6 +145,7 @@ const Game = () => {
                 maxLength="1"
                 value={letra}
                 onChange={(e) => setLetra(e.target.value.toUpperCase())}
+                placeholder="Digite aqui"
                 ref={inputRef}
               />
               <button className="btn-confirmar" type="submit">
@@ -163,7 +164,7 @@ const Game = () => {
         <div className="letras-erradas">
           {jogoIniciado ? `Letras erradas: ${letrasErradas.join(",")}` : ""}
         </div>
-        {/* <div className="progresso">{progresso}</div> */}
+
         <div className="tentativas">
           {" "}
           {jogoIniciado ? `Tentativas restantes ${tentativas}` : ""}

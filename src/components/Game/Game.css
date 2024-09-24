@@ -67,9 +67,9 @@ body {
   padding: 8px;
   border: 1px solid #00003f;
   border-radius: 4px;
-  width: 30px;
   box-sizing: border-box;
   margin-top: 10px;
+  text-align: center;
 }
 
 /* Formulário */
@@ -175,7 +175,6 @@ body {
 
   /* Input */
   .input-letra {
-    width: 25px;
     padding: 6px;
   }
 
